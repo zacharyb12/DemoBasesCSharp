@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LesBasesDuCSharp", "LesBase
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExempleDemo", "ExempleDemo\ExempleDemo.csproj", "{3459BD69-A532-433F-A96B-B4ADFCCD9223}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exo1ConsoleEtParse", "Exo1ConsoleEtParse\Exo1ConsoleEtParse.csproj", "{C16FF942-5CE3-40E9-A4D3-83DDCB0C7B42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3459BD69-A532-433F-A96B-B4ADFCCD9223}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3459BD69-A532-433F-A96B-B4ADFCCD9223}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3459BD69-A532-433F-A96B-B4ADFCCD9223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C16FF942-5CE3-40E9-A4D3-83DDCB0C7B42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C16FF942-5CE3-40E9-A4D3-83DDCB0C7B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C16FF942-5CE3-40E9-A4D3-83DDCB0C7B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C16FF942-5CE3-40E9-A4D3-83DDCB0C7B42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
