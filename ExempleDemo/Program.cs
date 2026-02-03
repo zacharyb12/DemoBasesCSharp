@@ -1,5 +1,14 @@
 ﻿
 
-// demander a l'utilisateur quel table de multiplication afficher;
+
+int a = int.MaxValue;
+
+Console.WriteLine(a);
 
 
+unchecked
+{
+    a += 1;
+
+    Console.WriteLine(a);
+}
