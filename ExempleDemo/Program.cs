@@ -1,12 +1,5 @@
 ﻿
-string valeurToConvert = Console.ReadLine();
 
-bool isConverted = false;
+// demander a l'utilisateur quel table de multiplication afficher;
 
-
-int valeurConverted;
-
-isConverted = int.TryParse(valeurToConvert , out valeurConverted);
-
-Console.WriteLine(valeurConverted);
 
