@@ -55,11 +55,9 @@ while(!isCorrect)
     }
 }
 
-
 // extraction des 10 premiers et des 2 derniers
 string tenFirstString = numeroCompteString.Substring(0, 10);
 string twoLastString = numeroCompteString.Substring(10, 2);
-
 
 // conversion des 10 premiers et des 2 derniers
 long tenFirstLong = long.Parse(tenFirstString);
