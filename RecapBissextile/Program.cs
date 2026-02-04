@@ -4,7 +4,6 @@
 
 // dans une boucle demander une date à l'utilisateur ( 10x )
 
-
 // si la date est bissextile l'ajouter à la liste bissextile
 // sinon l'ajouter a la liste nonBissextile
 
