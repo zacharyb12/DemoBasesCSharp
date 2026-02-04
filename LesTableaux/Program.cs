@@ -64,12 +64,16 @@ int[][] myInts2 = { new int[] { 1, 2, 3 }, new int[] { 5, 6, 7 } };
 
 Console.WriteLine( myInts2[1][0] );
 
+// ==================================================================
+
 // ---------------------------------------------------
 
 //Les collections
 
+// ---------------------------------------------------
 
 // ArrayList
+// necessite d'utiliser le unboxing
 
 ArrayList arrayList = new ArrayList();
 
@@ -93,13 +97,32 @@ arrayList.Remove(10);
 // ToArray : transforme en taableau
 object[] tabObject = arrayList.ToArray();
 
+// necessite d'utiliser le unboxing
+string element = (string)arrayList[0];
+
 
 // -------------------------------------------------
 // Hashtable : Clé - valeur
 Hashtable hashtable = new Hashtable();
 
 // ajout de clé et de valeur
-hashtable.Add(1,"valeur");
+hashtable.Add(1,"valeur1");
+hashtable.Add(2,"valeur2");
+
+// supprimer un element
+hashtable.Remove(1);
+
+// vider la hashtable
+hashtable.Clear();
+
+// verifier si la hashtable contient une clé
+bool hasKey = hashtable.ContainsKey(1);
+
+// verifier si la hashtable contient une valeur
+bool hasValue = hashtable.ContainsValue("valeur1");
+
+// récuperation d'une valeur
+string value = (string)hashtable[1];
 
 // recuperation d'un élément de ma hashTable
 string result = (string)hashtable[0];
@@ -110,10 +133,13 @@ string result = (string)hashtable[0];
 Queue queue = new Queue();
 
 // ajout a la Queue
-queue.Enqueue(result);
+queue.Enqueue("valeur1");
 
 // retire le dernier element de la Queue
 queue.Dequeue();
+
+// Retourne le premier élément dans l'ordre sans le retirer de la file
+string elementDeLaQueue = (string)queue.Peek();
 
 // -------------------------------------------------
 // Stack : LIFO : Last in First Out
@@ -121,18 +147,39 @@ queue.Dequeue();
 Stack stack = new Stack();
 
 // ajout a la Stack
-stack.Push(queue);
+stack.Push("valeur1");
 
 // retrait de la stack
 stack.Pop();
+
+//// Retourne le premier élément dans l'ordre sans le retirer de la file
+string elementDeLaStack = (string)queue.Peek();
+
+
+// ========================================================================
 // -------------------------------------------------
-
-
 // Les collections génériques
+// -------------------------------------------------
 
 // List
 
 List<string> maList = new List<string>();
+
+// ajout 
+maList.Add("element 1");
+
+// retrait de la liste
+maList.Remove("element 1");
+
+// recuperation de la taille
+int taille = maList.Count;
+
+// verifie la présence d'un element dans la liste
+maList.Contains("element 1");
+
+// permet de vider la liste
+maList.Clear();
+
 
 // -------------------------------------------------
 
@@ -140,15 +187,79 @@ List<string> maList = new List<string>();
 
 Dictionary<int,string> myDico = new Dictionary<int, string>();
 
+// ajout d'un élément dans le dictionnaire ( clé et valeur )
+myDico.Add(1,"element 1");
+
+// retirer un element de la liste avec la clé
+myDico.Remove(2);
+
+// vider le dictionnaire
+myDico.Clear();
+
+// verifier si le dictionnaire contient une clé
+bool containKey = myDico.ContainsKey(1);
+
+// verifier si le dictionnaire contient une valeur
+bool containValue = myDico.ContainsValue("element 1");
+
+
+// accéder a un element par l'index ( sans unboxing )
+string elementDico = myDico[1];
+
+// parcourir les clés et valeurs
+foreach (KeyValuePair<int,string> kvp in myDico)
+{
+    Console.WriteLine(kvp.Value);
+    Console.WriteLine(kvp.Key);
+}
+
+// parcourir les clés
+foreach (int key in myDico.Keys)
+{
+    Console.WriteLine(key);
+}
+
+// parcourir les valeurs
+foreach (string valeur  in myDico.Values)
+{
+    Console.WriteLine(valeur);
+}
+
+
 // -------------------------------------------------
-// Queue Générique
+// Queue Générique : FiFo ( First in First out )
 
-Queue<string > queue = new Queue<string>();
+Queue<string > queueGenerique = new Queue<string>();
+
+// ajout d'un element
+queueGenerique.Enqueue("element 1");
+
+// retrait d'un element
+queueGenerique.Dequeue();
+
+// recuperer un element sans le retirer de la file
+queueGenerique.Peek();
+
+// vider la file
+queueGenerique.Clear();
 
 // -------------------------------------------------
-// Stack Générique
+// Stack Générique : LiFo ( Last in First out )
 
-Stack<string> stack = new Stack<string>();
+Stack<string> stackGenerique = new Stack<string>();
+
+// ajout d'un element
+stackGenerique.Push("element 1");
+
+// retrait d'un element
+stackGenerique.Pop();
+
+// recuperer un element sans le retirer de la file
+stackGenerique.Peek();
+
+// vider la file
+stackGenerique.Clear();
+
 
 // -------------------------------------------------
 
