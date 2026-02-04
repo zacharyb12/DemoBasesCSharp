@@ -1,19 +1,22 @@
 ﻿
+// Creer une liste<string>
 
-List<string> maList = new List<string>();
+// ajouter cinq vehicules
 
+// afficher le nombre d'element dans la liste
 
-for (int i = 0; i < 5; i++)
-{
-    Console.WriteLine("Entrez un element à ajouter à la liste");
-    string element = Console.ReadLine();
+// afficher tout les elements de la liste avec un foreach
 
-    maList.Add(element);
-}
+// -----------------------------------------------
 
-Console.WriteLine($"Il y a {maList.Count} elements dans la liste");
+ //Creer un dictionnaire<int,string> 
 
-foreach (string value in maList)
-{
-    Console.WriteLine(value);
-}
+// ajouter cinq pays
+
+// afficher le nombre d'elements dans le dico
+
+//parcourir les clé et valeurs
+
+// parcourir les valeurs
+
+// parcourir les clés

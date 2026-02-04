@@ -181,6 +181,22 @@ maList.Contains("element 1");
 maList.Clear();
 
 
+
+for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine("Entrez un element à ajouter à la liste");
+    string element2 = Console.ReadLine();
+
+    maList.Add(element2);
+}
+
+Console.WriteLine($"Il y a {maList.Count} elements dans la liste");
+
+foreach (string value2 in maList)
+{
+    Console.WriteLine(value2);
+}
+
 // -------------------------------------------------
 
 // Dictionnaire
