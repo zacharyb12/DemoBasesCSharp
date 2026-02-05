@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LesMethodes
 {
-    internal class Fahrenheit
+    internal struct Fahrenheit
     {
+        public double Temperature;
     }
 }

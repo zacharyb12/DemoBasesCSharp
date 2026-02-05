@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LesMethodes
 {
-    internal class Celcius
+    internal struct Celcius
     {
+        public double Temperature;
     }
 }
