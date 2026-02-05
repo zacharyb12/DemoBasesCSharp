@@ -8,3 +8,21 @@
 //                                  X: 3 - Y : 3 
 
 
+int[,] ints = new int[3,3];
+//[0.0 , 0.1 , 0.2]
+//[1.0 , 1.1 , 1.2]
+//[2.0 , 2.1 , 2.2]
+
+ints[0, 0] = 1;
+ints[1, 1] = 1;
+ints[2, 2] = 1;
+
+for (int i = 0; i < 3; i++)
+{
+    for (int j = 0; j < 3; j++)
+    {
+        Console.Write(ints[i,j]);
+    }
+    Console.WriteLine();
+}
+
