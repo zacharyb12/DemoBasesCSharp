@@ -29,3 +29,5 @@ Console.WriteLine(monAnimal3.Nom);
 Console.WriteLine(monAnimal3.Couleur);
 
 Console.WriteLine($"L'animal {monAnimal3.Nom} à {monAnimal3.Age} ans et est de couleur {monAnimal3.Couleur}");
+
+

@@ -1,28 +1,46 @@
-﻿
+﻿using ExercicesStructure;
 
-//Ecrire une structure pour définir un point possédant deux entier X, Y et créer un tableau
-//deux dimensions de 5 sur 5 de type « Point » (nullable) et remplir une des diagonales,
+
+//Ecrire une structure pour définir un point possédant deux entier X, Y
+//et créer un tableau deux dimensions de 5 sur 5 de type « Point » (nullable)
+//et remplir une des diagonales
 //ensuite à l’aide de deux boucles afficher les valeurs dans la console comme suit :
 // X: 1 - Y : 1 
 //                  X: 2 - Y : 2 
 //                                  X: 3 - Y : 3 
 
 
-int[,] ints = new int[3,3];
-//[0.0 , 0.1 , 0.2]
-//[1.0 , 1.1 , 1.2]
-//[2.0 , 2.1 , 2.2]
 
-ints[0, 0] = 1;
-ints[1, 1] = 1;
-ints[2, 2] = 1;
 
-for (int i = 0; i < 3; i++)
+Point?[,] mesPoints = new Point?[5, 5];
+
+//mesPoints[0, 0] = new Point(1, 1);
+//mesPoints[1, 1] = new Point(2, 2);
+
+for (int i = 0; i < 5; i++)
 {
-    for (int j = 0; j < 3; j++)
+    for (int j = 0; j < 5; j++)
     {
-        Console.Write(ints[i,j]);
+        if(i == j)
+        {
+            mesPoints[i, j] = new Point(i + 1 , j + 1);
+        }
+    }
+}
+
+
+for (int i = 0; i < 5; i++)
+{
+    for (int j = 0; j < 5; j++)
+    {
+        if (mesPoints[i,j] != null)
+        {
+            Console.Write($" X : {mesPoints[i,j].Value.X} - Y : {mesPoints[i,j].Value.Y}");
+        }
+        else
+        {
+            Console.Write("               ");
+        }
     }
     Console.WriteLine();
 }
-
