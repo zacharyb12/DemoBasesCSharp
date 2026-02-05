@@ -1,16 +1,37 @@
 ﻿
 
 //Creer deux liste : bissextile et nonBissextile de type string
+List<string> bissextile = new List<string>();
+List<string> nonBissextile = new List<string>();
 
 // dans une boucle demander une date à l'utilisateur ( 10x )
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine("Entrez une année!");
+    string annee = Console.ReadLine();
 
-// si la date est bissextile l'ajouter à la liste bissextile
-// sinon l'ajouter a la liste nonBissextile
+    int anneeConverted = int.Parse(annee);
 
-// une conversion sera necessaire pour verifier l'année mais la date doit 
-// être enregistrer en string 
+    if ((anneeConverted % 4 == 0 && anneeConverted % 100 != 0) || (anneeConverted % 400 == 0))
+    {
+        bissextile.Add(annee);
+    }
+    else
+    {
+        nonBissextile.Add(annee);
+    }
+}
 
-// rappel :
-// une année est bissextile si elle est divisible par 4
-// mais non divisible par 100 
-// ou si elle est divisible par 400
+Console.WriteLine("Les années Bissextiles");
+foreach (string annee in bissextile)
+{
+    Console.WriteLine(annee);
+}
+
+Console.WriteLine();
+
+Console.WriteLine("Les années non Bissextiles");
+foreach (string annee in nonBissextile)
+{
+    Console.WriteLine(annee);
+}
